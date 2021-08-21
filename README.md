@@ -60,7 +60,7 @@ and then use it as with the payload as:
    console.log(dancevalidator.ValidateeRole({ Role: "Hockeyplayer" }));
 ```
 
-For more details, check out the `runtime-typescript-checker-demo`.
+For more details, check out the [runtime-typescript-checker-demo](https://github.com/tomnil/runtime-typescript-checker-demo).
 
 ## Custom TypeGuards/Validators
 
@@ -73,7 +73,7 @@ This project had not been possible without the [Ajv JSON schema validator](https
 
 ## More information
 
-Check out the demo project: `runtime-typescript-checker-demo`.
+Check out the demo project: [runtime-typescript-checker-demo](https://github.com/tomnil/runtime-typescript-checker-demo).
 
 Also, it's possible to run `npm run test` on this project. It's probably a good idea to edit `generateschema.test.ts` and disable the `teardown` step.
 
