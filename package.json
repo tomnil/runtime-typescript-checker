@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Parses TypeScript types and interfaces to automatically generate code for runtime validation",
   "main": "./bin/index.js",
-  "bin": "./bin/index.js",
+  "bin": {
+    "runtime-typescript-checker": "bin/index.js"
+  },
   "dependencies": {
     "ajv": "^8.6.2",
     "typescript-json-schema": "^0.50.1"
@@ -35,5 +37,15 @@
   "homepage": "https://github.com/tomnil/runtime-typescript-checker.git",
   "files": [
     "bin/**/*"
-  ]
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomnil/runtime-typescript-checker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tomnil/runtime-typescript-checker/issues"
+  }
 }
