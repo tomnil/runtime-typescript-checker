@@ -1,0 +1,117 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2020": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "rules": {
+        // Below this line: "must-OFF" yrules
+        "indent": "off",
+        "quotes": "off",
+        "no-tabs": "off",
+        "semi": "error",
+        "padded-blocks": "off",
+        "no-multi-spaces": "off",
+        "no-multiple-empty-lines": "off",
+        "spaced-comment": "off",
+        "operator-linebreak": "off",
+        "comma-dangle": "off",
+        "eol-last": "off",
+        "no-undef-init": "off",
+        "brace-style": "off", // Too few options to match our style
+        "no-unneeded-ternary": "off", // Makes not-to-smart optimizations (harder to read-code)
+        "no-return-await": "off",
+        // Below this line: "must-ON" rules
+        "max-len": [
+            2,
+            340,
+            {
+                "ignoreComments": true,
+                "ignoreTrailingComments": true,
+                "ignoreUrls": true,
+                "ignoreStrings": true,
+                "ignoreTemplateLiterals": true
+            }
+        ],
+        "no-trailing-spaces": "warn", // disallow trailing whitespace at the end of lines
+        "space-before-function-paren": [
+            "warn",
+            {
+                "anonymous": "always",
+                "named": "never",
+                "asyncArrow": "always"
+            }
+        ],
+        "eqeqeq": "error",
+        "require-await": "error",
+        "no-unreachable": "warn", // disallow unreachable statements after a return, throw, continue, or break statement
+        "lines-between-class-members": "off",
+        "no-useless-constructor": "warn",
+        "no-useless-escape": "warn",
+        "no-useless-return": "warn",
+        "valid-typeof": "error",
+        "prefer-promise-reject-errors": "error",
+        "handle-callback-err": "error",
+        "one-var": "off",
+        "no-mixed-requires": "error",
+        // Below this line: "Should-ON" rules
+        "new-cap": "off",
+        "no-empty-function": "warn",
+        "dot-notation": "warn",
+        "no-unused-vars": "off", // Rule "@typescript-eslint/no-unused-vars" is used instead 
+        "no-param-reassign": "warn",
+        "no-useless-concat": "warn",
+        "array-callback-return": "warn",
+        "no-use-before-define": "off",
+        "import/no-useless-path-segments": "off",
+        "no-mixed-operators": "off",
+        // Below this line: "TBD" rules
+        "guard-for-in": "off",
+        // "import/order": "warn",
+        "curly": [
+            "off",
+            "multi-or-nest",
+            "consistent"
+        ],
+        "prefer-template": "error", // makes string use `xx`;
+        "quote-props": "off", // Will change let a= { "foo": bar } into { foo: bar }
+        "prefer-const": "error",
+        "camelcase": "off",
+        "@typescript-eslint/ban-ts-comment": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "warn",
+        "@typescript-eslint/no-this-alias": "off",
+        "no-console": "error",
+        "@typescript-eslint/ban-types": [
+            "error",
+            {
+                "types": {
+                    "String": {
+                        "message": "Use string instead",
+                        "fixWith": "string"
+                    },
+                    "{}": {
+                        "message": "Define the object (TypeScript). If empty - use 'undefined'"
+                        // "fixWith": "undefined"
+                    }
+                }
+            }
+        ],
+        "@typescript-eslint/no-explicit-any": [
+            "off",
+            {
+                "fixToUnknown": false,
+                "ignoreRestArgs": true
+            }
+        ]
+        // Below this line: "Testing" rules
+    }
+}
