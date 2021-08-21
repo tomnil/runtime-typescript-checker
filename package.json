@@ -1,6 +1,6 @@
 {
   "name": "runtime-typescript-checker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Parses TypeScript types and interfaces to automatically generate code for runtime validation",
   "main": "./bin/index.js",
   "bin": {
