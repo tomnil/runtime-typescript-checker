@@ -48,11 +48,11 @@ export function GenerateSchemaFile(args: LoadOrGenerateArgs): { Success: true, F
             = args.SourceFilePaths.map(name => ({ AbsolutePath: path.resolve(name), Name: name, Symbols: [] }));
         for (const mySymbol of generator.getSymbols()) {
 
-            let nodeObject = <any>mySymbol.symbol.declarations[0];  // eslint-disable-line @typescript-eslint/no-explicit-any
+            let nodeObject: ts.Node | undefined = mySymbol.symbol.declarations?.[0];  // eslint-disable-line @typescript-eslint/no-explicit-any
             while (nodeObject?.parent)
                 nodeObject = nodeObject.parent;
 
-            const sourceFile: ts.SourceFile = nodeObject;
+            const sourceFile = nodeObject as ts.SourceFile;
 
             if (sourceFile.isDeclarationFile)   // Ignore nodejs files
                 continue;

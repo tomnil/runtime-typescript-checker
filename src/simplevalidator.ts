@@ -38,7 +38,7 @@ export function GenericValidator<T>(definitionName: string, candidate: T): Valid
 
         return { Success: false, Error: `Type not found. Name=${definitionName}`, Errors: undefined };
 
-    } catch (error) {
+    } catch (error: any) {
         return { Success: false, Error: error.message, Errors: undefined };
     }
 
