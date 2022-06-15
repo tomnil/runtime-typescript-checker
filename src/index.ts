@@ -112,7 +112,7 @@ function WriteTSFile(iTargetFileName: string, iPrefix: string | undefined, iSuff
 
     const justPath = path.dirname(iTargetFileName);
     const nameWithoutExtension = path.basename(iTargetFileName, path.extname(iTargetFileName));
-    const destinationFilename = path.join(".", justPath, `${iPrefix}${nameWithoutExtension}${iSuffix}.ts`);
+    const destinationFilename = path.join(justPath, `${iPrefix}${nameWithoutExtension}${iSuffix}.ts`)
     const baseValidatorPath = iPathToValidator === "runtime-typescript-checker" ? iPathToValidator : path.relative(path.dirname(iTargetFileName), iPathToValidator).split(path.sep).join(path.posix.sep);
 
     if (path.relative(iTargetFileName, destinationFilename) === "")
